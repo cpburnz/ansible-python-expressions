@@ -48,8 +48,8 @@ MATCH_IMPORT = re.compile(r'^(?P<import>import\b)?(?!.+\bimport\b)')
 
 class ActionModule(object):
 	"""
-	The ``ActionModule`` class implements the *eval* action for evaluating
-	python expressions.
+	The ``ActionModule`` class implements the *expr* action for evaluating
+	python expressions and statements.
 	"""
 
 	TRANSFERS_FILES = False
@@ -152,19 +152,19 @@ class ActionModule(object):
 		*module_args* (``str``) contains the action arguments when passed as
 		a string. E.g.,
 
-		.. code:: yaml
+		.. code-block:: yaml
 
-		  - expr: eval=...
+			- expr: eval=...
 
 		*inject* (``dict``) contains the current set of Ansible variables.
 
 		*complex_args* (``dict``) contains the action arguments when passed
 		as a dictionary. E.g.,::
 
-		.. code:: yaml
+		.. code-block:: yaml
 
-		  - expr:
-		      eval: ...
+			- expr:
+			    eval: ...
 
 		Returns the result of the action (``ansible.runner.return_data.ReturnData``).
 		"""
