@@ -51,6 +51,10 @@ Multiple statments can be executed as:
 See `library/expr`_ for the documentation on *expr* action. See
 `test/eval.yml`_ and `test/exec.yml`_ for more examples.
 
+.. _`library/expr`: library/expr
+.. _`test/eval.yml`: test/eval.yml
+.. _`test/exec.yml`: test/exec.yml
+
 
 
 Including
