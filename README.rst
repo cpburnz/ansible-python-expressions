@@ -56,7 +56,7 @@ See `library/expr`_ for the documentation on *expr* action. See
 Including
 ---------
 
-To use the *expr* action plugin only with a set of playbooks:
+To use the *expr* action plugin with a set of playbooks:
 
 - Copy the contents of `action_plugins/`_ into ``./action_plugins/`` (relative
   to the playbooks).
@@ -65,6 +65,8 @@ To use the *expr* action plugin only with a set of playbooks:
 
 See `Distributing Plugins`_ for some vague details.
 
+.. _`action_plugins/`: action_plugins
+.. _`library/`: library
 .. _`Distributing Plugins`: http://docs.ansible.com/ansible/developing_plugins.html#distributing-plugins
 
 
@@ -73,7 +75,7 @@ Source
 ------
 
 The source code for *expr* is available from the GitHub repo
-`cpburnz/ansible-python-expressions`_
+`cpburnz/ansible-python-expressions`_.
 
 .. _`cpburnz/ansible-python-expressions`: https://github.com/cpburnz/ansible-python-expressions
 
@@ -88,5 +90,6 @@ the `FAQ`_ for more information.
 
 .. _`GNU General Public License Version 3`: http://www.gnu.org/licenses/gpl-3.0.html
 .. _`Ansible is licensed`: https://github.com/ansible/ansible/blob/devel/COPYING
+.. _`LICENSE`: LICENSE
 .. _`Quick Guide`: http://www.gnu.org/licenses/quick-guide-gplv3.en.html
 .. _`FAQ`: http://www.gnu.org/licenses/gpl-faq.en.html
