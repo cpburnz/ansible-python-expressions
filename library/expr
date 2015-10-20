@@ -1,0 +1,64 @@
+#!/usr/bin/python
+"""
+NOTE: This file is just a place-holder required to expose the *expr*
+action to Ansible. The *expr* action is completely implemented by the
+*expr* action plugin.
+"""
+
+DOCUMENTATION = """
+---
+module: expr
+short_description: Evaluate python expressions.
+description:
+  - When you prevent functionality, someone will find a way around it.
+    The M(expr) action allows use of C(eval()) to evaluate expressions
+    and use of C(exec()) to execute statements.
+
+options:
+
+  eval:
+    description:
+      - Evaluate the expression. Runs C(eval()) on the provided
+        expression. C(eval()) is provided the current set of Ansible
+        variables. The resulting value is available from the I(eval) key
+        from the registered result.
+      - Traceback information will be printed on error when verbose mode
+        is set to "-vv" or higher.
+    required: false
+
+  exec:
+    description:
+      - Executes the statements. Runs C(exec()) on the provided
+        statements. C(exec()) is provided the current set of Ansible
+        variables. The resulting value is available from the I(exec) key
+        from the registered result.
+      - This requires I(returns) to be set.
+      - Traceback information will be printed on error when verbose mode
+        is set to "-vv" or higher.
+    required: false
+
+  imports:
+    description:
+      - Import the specified modules and expose them for use within
+        I(eval) or I(exec). This can be either a single string or a list
+        of strings containing import statements. Multiple import
+        statements on a single line can be separated by a semi-colon
+        C(";") for terseness. Import statements are in the form
+        C([import] ...) or C([from] ... import ...) where C([import])
+        and C([from]) are optional.
+    required: false
+
+  returns:
+    description:
+      - The values to return from the execution. This is evaluated as an
+        expression.
+      - This is required by I(exec).
+      - This is not applicable to I(eval).
+    required: false
+
+  vars:
+    description:
+      - Any additional variables to expose for use within I(eval) or
+        I(exec). This must be a dictionary.
+    required: false
+"""

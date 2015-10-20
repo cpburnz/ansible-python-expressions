@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+
+    - expr:
+        exec: |
+          import time
+          now = time.time()
+        returns: now
+      register: result
+
+    - debug:
+        msg: "{{ result.exec }}"

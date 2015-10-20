@@ -1,0 +1,44 @@
+---
+- hosts: localhost
+  gather_facts: no
+
+  vars:
+    date_format: "%Y-%m-%d %H:%M:%S"
+
+  tasks:
+
+    - expr:
+        eval: "[x for x in xrange(5)]"
+      register: result
+
+    - debug:
+        msg: "{{ result.eval }}"
+
+    - expr:
+        eval: os.path.join(a, b)
+        imports: os.path
+        vars:
+          a: foo
+          b: bar
+      register: result
+
+    - debug:
+        msg: "{{ result.eval }}"
+
+    - expr:
+        eval: datetime.datetime.now().strftime(date_format)
+        imports: datetime
+      register: result
+
+    - debug:
+        msg: "{{ result.eval }}"
+
+    - expr:
+        eval: datetime.datetime.now(tzlocal()).isoformat()
+        imports:
+          - datetime
+          - dateutil.tz import tzlocal
+      register: result
+
+    - debug:
+        msg: "{{ result.eval }}"
