@@ -5,8 +5,12 @@ to execute expressions and the use of ``exec()`` to execute statements.
 """
 
 __author__ = "Caleb P. Burns"
+__copyright__ = "Copyright © 2015 Caleb P. Burns"
 __created__ = "2015-10-17"
+__email__ = "cpburnz@gmail.com"
+__license__ = "GPLv3"
 __updated__ = "2015-10-19"
+__version__ = "1.0.0"
 
 import ast
 import re
