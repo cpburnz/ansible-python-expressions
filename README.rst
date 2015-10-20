@@ -58,15 +58,14 @@ Including
 
 To use the *expr* action plugin with a set of playbooks:
 
-- Copy the contents of `action_plugins/`_ into ``./action_plugins/`` (relative
-  to the playbooks).
-- Copy the contents of `library/`_ into ``./library/`` (relative to the
+- Copy `action_plugins/expr.py`_ into ``./action_plugins/`` (relative to the
   playbooks).
+- Copy `library/expr`_ into ``./library/`` (relative to the playbooks).
 
 See `Distributing Plugins`_ for some vague details.
 
-.. _`action_plugins/`: action_plugins
-.. _`library/`: library
+.. _`action_plugins/expr.py`: action_plugins/expr.py
+.. _`library/expr`: library/expr
 .. _`Distributing Plugins`: http://docs.ansible.com/ansible/developing_plugins.html#distributing-plugins
 
 
